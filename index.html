@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Ramírez — Portafolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Barra lateral tipo explorador de archivos -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="folder-icon">▾</span>
+      <span class="folder-name">david-ramirez</span>
+    </div>
+    <nav class="file-tree" id="fileTree">
+      <button class="file-item active" data-target="sobre-mi" data-lang="Markdown">
+        <span class="file-icon">◆</span> sobre-mi.md
+      </button>
+      <button class="file-item" data-target="habilidades" data-lang="JSON">
+        <span class="file-icon">◆</span> habilidades.json
+      </button>
+
+      <button class="folder-toggle" id="projectsToggle">
+        <span class="chevron">▾</span> proyectos
+      </button>
+      <div class="folder-contents" id="projectsFolder">
+        <button class="file-item nested" data-target="tourismeasy" data-lang="PHP">
+          <span class="file-icon">◆</span> tourismeasy.php
+        </button>
+        <button class="file-item nested" data-target="tycoon" data-lang="TypeScript">
+          <span class="file-icon">◆</span> supermarket-tycoon.ts
+        </button>
+        <button class="file-item nested" data-target="toriel" data-lang="JavaScript">
+          <span class="file-icon">◆</span> toriel.js
+        </button>
+        <button class="file-item nested" data-target="inventario" data-lang="JavaScript">
+          <span class="file-icon">◆</span> inventario-deportivo.js
+        </button>
+        <button class="file-item nested" data-target="tienda-movil" data-lang="CSS">
+          <span class="file-icon">◆</span> tienda-movil.css
+        </button>
+        <button class="file-item nested" data-target="segutic" data-lang="HTML">
+          <span class="file-icon">◆</span> segutic.html
+        </button>
+        <button class="file-item nested" data-target="futbolmania" data-lang="HTML">
+          <span class="file-icon">◆</span> futbolmania.html
+        </button>
+        <button class="file-item nested" data-target="superfritos" data-lang="HTML">
+          <span class="file-icon">◆</span> superfritos.html
+        </button>
+        <button class="file-item nested" data-target="landing-consultoria" data-lang="HTML">
+          <span class="file-icon">◆</span> landing-consultoria.html
+        </button>
+      </div>
+
+      <button class="file-item" data-target="contacto" data-lang="Markdown">
+        <span class="file-icon">◆</span> contacto.md
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Panel principal -->
+  <div class="main">
+
+    <div class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir explorador">☰</button>
+      <div class="tabs" id="tabs"></div>
+    </div>
+
+    <div class="editor" id="editor">
+
+      <!-- sobre-mi.md -->
+      <section class="pane active" data-pane="sobre-mi">
+        <div class="code">
+          <div class="line"><span class="tok-com">/**</span></div>
+          <div class="line"><span class="tok-com"> * sobre-mi.md</span></div>
+          <div class="line"><span class="tok-com"> */</span></div>
+          <div class="line"></div>
+          <div class="line"><h1 class="hl1">David Ramírez</h1></div>
+          <div class="line"><span class="tok-key">rol:</span> <span class="tok-str">"Tecnólogo en Análisis y Desarrollo de Software (ADSO)"</span></div>
+          <div class="line"></div>
+          <div class="line">Estudiante del SENA, en formación en el programa</div>
+          <div class="line">Tecnólogo en Análisis y Desarrollo de Software. Diseño</div>
+          <div class="line">soluciones web tanto en la interfaz como en la lógica</div>
+          <div class="line">del sistema: desde bases de datos en PostgreSQL hasta</div>
+          <div class="line">la maquetación en HTML y CSS.</div>
+          <div class="line"></div>
+          <div class="line">Actualmente profundizo en PHP y en la gestión de bases</div>
+          <div class="line">de datos, con foco en analizar bien los requerimientos</div>
+          <div class="line">antes de escribir una sola línea de código.</div>
+          <div class="line"></div>
+          <div class="line"><span class="tok-key">ubicación:</span> <span class="tok-str">"Piedecuesta, Santander"</span></div>
+        </div>
+
+        <div class="subfile">
+          <div class="subfile-label">educacion.log</div>
+          <div class="code">
+            <div class="line"><span class="tok-com">[2025 — 2027]</span> SENA</div>
+            <div class="line">Tecnólogo en Análisis y Desarrollo de Software</div>
+            <div class="line"><span class="tag tag-run">en curso</span></div>
+            <div class="line"></div>
+            <div class="line"><span class="tok-com">[2012 — 2024]</span> Escuela Normal Superior de Piedecuesta</div>
+            <div class="line">Bachiller académico, profundización en pedagogía</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- habilidades.json -->
+      <section class="pane" data-pane="habilidades">
+        <div class="code">
+          <div class="line"><span class="tok-punc">{</span></div>
+          <div class="line indent"><span class="tok-key">"desarrollo"</span><span class="tok-punc">:</span> [<span class="tok-str">"HTML5"</span>, <span class="tok-str">"CSS3"</span>, <span class="tok-str">"JavaScript"</span>, <span class="tok-str">"PHP"</span>]<span class="tok-punc">,</span></div>
+          <div class="line indent"><span class="tok-key">"bases_de_datos"</span><span class="tok-punc">:</span> [<span class="tok-str">"PostgreSQL"</span>]<span class="tok-punc">,</span></div>
+          <div class="line indent"><span class="tok-key">"control_de_versiones"</span><span class="tok-punc">:</span> [<span class="tok-str">"Git"</span>, <span class="tok-str">"GitHub"</span>]<span class="tok-punc">,</span></div>
+          <div class="line indent"><span class="tok-key">"ofimática"</span><span class="tok-punc">:</span> [<span class="tok-str">"Microsoft básico"</span>, <span class="tok-str">"Excel intermedio"</span>]<span class="tok-punc">,</span></div>
+          <div class="line indent"><span class="tok-key">"blandas"</span><span class="tok-punc">:</span> [</div>
+          <div class="line indent2"><span class="tok-str">"análisis y diseño"</span>,</div>
+          <div class="line indent2"><span class="tok-str">"trabajo en equipo"</span>,</div>
+          <div class="line indent2"><span class="tok-str">"comunicación asertiva"</span>,</div>
+          <div class="line indent2"><span class="tok-str">"aprendizaje continuo"</span>,</div>
+          <div class="line indent2"><span class="tok-str">"adaptabilidad"</span></div>
+          <div class="line indent"><span class="tok-punc">]</span></div>
+          <div class="line"><span class="tok-punc">}</span></div>
+        </div>
+      </section>
+
+      <!-- tourismeasy.php -->
+      <section class="pane" data-pane="tourismeasy">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/tourismeasy.php</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Santander Accesible</h2></div>
+          <div class="line"><span class="tok-com">// antes: TourismEasy</span></div>
+          <div class="line"></div>
+          <div class="line">Plataforma web de turismo accesible para el</div>
+          <div class="line">departamento de Santander, dirigida a viajeros y a</div>
+          <div class="line">empresas del sector (transporte, hospedaje, planes</div>
+          <div class="line">turísticos).</div>
+          <div class="line"></div>
+          <div class="line">Incluye un módulo de e-commerce de productos</div>
+          <div class="line">artesanales con panel administrativo para los</div>
+          <div class="line">artesanos, y coordinación de servicios entre</div>
+          <div class="line">viajeros y empresas vía WhatsApp.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">PHP</span><span class="tag">PostgreSQL</span><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Git</span>
+          </div>
+          <div class="line"><span class="tok-key">estado:</span> <span class="tag tag-run">en desarrollo activo</span></div>
+        </div>
+      </section>
+
+      <!-- supermarket-tycoon.ts -->
+      <section class="pane" data-pane="tycoon">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/supermarket-tycoon.ts</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Supermarket SENA Tycoon</h2></div>
+          <div class="line"></div>
+          <div class="line">Videojuego de simulación tipo "tycoon" pensado para</div>
+          <div class="line">estudiantes de mercadeo del SENA. El jugador asume el</div>
+          <div class="line">rol de dueño de un supermercado: atiende clientes,</div>
+          <div class="line">gestiona ventas y hace pedidos de productos.</div>
+          <div class="line"></div>
+          <div class="line">Busca reforzar la competencia de atención al cliente</div>
+          <div class="line">antes de la etapa productiva. Pensado como experiencia</div>
+          <div class="line">inmersiva en realidad virtual, con soporte para gafas</div>
+          <div class="line">VR y pruebas en computador de escritorio.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">TypeScript</span><span class="tag">Node.js</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://supermarket-adso-sena.vercel.app/" target="_blank" rel="noopener">supermarket-adso-sena.vercel.app</a></div>
+        </div>
+      </section>
+
+      <!-- toriel.js -->
+      <section class="pane" data-pane="toriel">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/toriel.js</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">TORIEL</h2></div>
+          <div class="line"></div>
+          <div class="line">Plataforma de e-commerce con panel de administrador</div>
+          <div class="line">y de usuario, sistema de CAPTCHA propio, y un modo</div>
+          <div class="line">oscuro con paleta sepia en toda la interfaz.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- inventario-deportivo.js -->
+      <section class="pane" data-pane="inventario">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/inventario-deportivo.js</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Inventario de prendas deportivas</h2></div>
+          <div class="line"></div>
+          <div class="line">Aplicación web interactiva para el control de</div>
+          <div class="line">inventarios: agregar, visualizar y filtrar productos</div>
+          <div class="line">de forma dinámica, con toda la lógica resuelta del</div>
+          <div class="line">lado del cliente.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/Inventario-camisas-de-futbol/" target="_blank" rel="noopener">manolora67-cloud.github.io/Inventario-camisas-de-futbol</a></div>
+        </div>
+      </section>
+
+      <!-- tienda-movil.css -->
+      <section class="pane" data-pane="tienda-movil">
+        <div class="code">
+          <div class="line"><span class="tok-com">/* proyectos/tienda-movil.css */</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Tienda virtual de dispositivos móviles</h2></div>
+          <div class="line"></div>
+          <div class="line">Maquetación de una interfaz comercial enfocada en</div>
+          <div class="line">layouts complejos y en la alineación de cuadrículas</div>
+          <div class="line">responsivas.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">CSS Grid</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/Tienda-de-celulares-sin-funcionalidad-con-grids-/" target="_blank" rel="noopener">manolora67-cloud.github.io/Tienda-de-celulares...</a></div>
+        </div>
+      </section>
+
+      <!-- segutic.html -->
+      <section class="pane" data-pane="segutic">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/segutic.html</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">SeguTIC Soluciones</h2></div>
+          <div class="line"></div>
+          <div class="line">Sitio de una sola página para una empresa de</div>
+          <div class="line">consultoría, hecho con HTML y CSS puros, sin</div>
+          <div class="line">frameworks. El JavaScript se usa solo para lo</div>
+          <div class="line">interactivo: menú móvil, resaltado del enlace</div>
+          <div class="line">activo, botón "volver arriba" y validación del</div>
+          <div class="line">formulario de contacto.</div>
+          <div class="line"></div>
+          <div class="line">El proyecto documenta cómo conectar ese formulario</div>
+          <div class="line">a un servicio externo (Formspree o Google Sheets)</div>
+          <div class="line">para poder exportar los mensajes recibidos a Excel.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/SEGUTIC/" target="_blank" rel="noopener">manolora67-cloud.github.io/SEGUTIC</a></div>
+        </div>
+      </section>
+
+      <!-- futbolmania.html -->
+      <section class="pane" data-pane="futbolmania">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/futbolmania.html</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Futbolmanía</h2></div>
+          <div class="line"></div>
+          <div class="line">Tienda virtual de artículos deportivos: camisetas,</div>
+          <div class="line">zapatillas y balones, con catálogo de productos,</div>
+          <div class="line">precios y una oferta flash con cupón de descuento.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/Futbolmania/" target="_blank" rel="noopener">manolora67-cloud.github.io/Futbolmania</a></div>
+        </div>
+      </section>
+
+      <!-- superfritos.html -->
+      <section class="pane" data-pane="superfritos">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/superfritos.html</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Super Fritos</h2></div>
+          <div class="line"></div>
+          <div class="line">Sitio de una sola página para un restaurante de</div>
+          <div class="line">comidas rápidas: menú de productos, promociones,</div>
+          <div class="line">catálogo descargable en PDF, galería de fotos y</div>
+          <div class="line">contacto directo por WhatsApp y redes sociales.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/Restaurante-super-fritos-avanzado./" target="_blank" rel="noopener">manolora67-cloud.github.io/Restaurante-super-fritos</a></div>
+        </div>
+      </section>
+
+      <!-- landing-consultoria.html -->
+      <section class="pane" data-pane="landing-consultoria">
+        <div class="code">
+          <div class="line"><span class="tok-com">// proyectos/landing-consultoria.html</span></div>
+          <div class="line"></div>
+          <div class="line"><h2 class="hl2">Landing de consultoría</h2></div>
+          <div class="line"></div>
+          <div class="line">Plantilla de landing page enfocada en conversión</div>
+          <div class="line">para servicios de consultoría de alto nivel: planes</div>
+          <div class="line">y precios, integración de pasarela de pagos,</div>
+          <div class="line">preguntas frecuentes y medición con Google</div>
+          <div class="line">Analytics. Los datos de pago y testimonios son</div>
+          <div class="line">solo un ejemplo ilustrativo.</div>
+          <div class="line"></div>
+          <div class="line stack-line">
+            <span class="tok-key">stack:</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="line"><span class="tok-key">demo:</span> <a class="tok-link" href="https://manolora67-cloud.github.io/Landing-consultoria/" target="_blank" rel="noopener">manolora67-cloud.github.io/Landing-consultoria</a></div>
+        </div>
+      </section>
+
+      <!-- contacto.md -->
+      <section class="pane" data-pane="contacto">
+        <div class="code">
+          <div class="line"><span class="tok-com">## contacto.md</span></div>
+          <div class="line"></div>
+          <div class="line"><span class="tok-key">teléfono:</span> <a class="tok-link" href="tel:+573174613395">3174613395</a></div>
+          <div class="line"><span class="tok-key">correo:</span> <a class="tok-link" href="mailto:manolora67@gmail.com">manolora67@gmail.com</a></div>
+          <div class="line"><span class="tok-key">linkedin:</span> <a class="tok-link" href="https://www.linkedin.com/in/david-ramírez-1520bb378" target="_blank" rel="noopener">linkedin.com/in/david-ramírez-1520bb378</a></div>
+          <div class="line"><span class="tok-key">github:</span> <a class="tok-link" href="https://github.com/manolora67-cloud" target="_blank" rel="noopener">github.com/manolora67-cloud</a></div>
+          <div class="line"><span class="tok-key">ubicación:</span> <span class="tok-str">"Piedecuesta, Santander"</span></div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="statusbar">
+      <span id="statusFile">sobre-mi.md</span>
+      <span class="sep">|</span>
+      <span id="statusLang">Markdown</span>
+      <span class="sep">|</span>
+      <span id="statusLines">18 líneas</span>
+      <span class="sep grow"></span>
+      <span>ADSO · SENA</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
