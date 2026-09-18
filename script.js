@@ -1,6 +1,15 @@
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---- Volver arriba (definido antes de usarlo en onScroll) ---- */
+  var toTopBtn = document.getElementById("toTop");
+  function toggleBackToTop() {
+    toTopBtn.style.visibility = window.scrollY > 600 ? "visible" : "hidden";
+  }
+  toTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
   /* ---- Nav: sombra al hacer scroll ---- */
   var nav = document.getElementById("nav");
   function onScroll() {
@@ -46,15 +55,6 @@
     );
     sections.forEach(function (s) { observer.observe(s); });
   }
-
-  /* ---- Volver arriba ---- */
-  var toTopBtn = document.getElementById("toTop");
-  function toggleBackToTop() {
-    toTopBtn.style.visibility = window.scrollY > 600 ? "visible" : "hidden";
-  }
-  toTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-  });
 
   /* ---- Copiar correo / teléfono ---- */
   document.querySelectorAll("[data-copy]").forEach(function (el) {
